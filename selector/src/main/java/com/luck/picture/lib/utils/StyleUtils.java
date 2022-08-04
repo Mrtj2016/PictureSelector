@@ -69,6 +69,24 @@ public class StyleUtils {
         return count >= 2;
     }
 
+
+    /**
+     * 验证文本是否有1个动态匹配符
+     *
+     * @param text
+     * @return
+     */
+    public static boolean checkTextOneFormatValidity(String text) {
+        String pattern = "%[^%]*\\d";
+        Pattern compile = Pattern.compile(pattern);
+        Matcher matcher = compile.matcher(text);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        return count >= 1;
+    }
+
     /**
      * 验证大小的合法性
      *

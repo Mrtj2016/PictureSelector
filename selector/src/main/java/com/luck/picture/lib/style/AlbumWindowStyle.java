@@ -26,6 +26,8 @@ public class AlbumWindowStyle implements Parcelable {
      */
     private int albumAdapterItemTitleColor;
 
+    private boolean isDisplaySelectTag;
+
     public AlbumWindowStyle() {
 
     }
@@ -92,5 +94,13 @@ public class AlbumWindowStyle implements Parcelable {
 
     public void setAlbumAdapterItemTitleColor(int albumAdapterItemTitleColor) {
         this.albumAdapterItemTitleColor = albumAdapterItemTitleColor;
+    }
+
+    public boolean isDisplaySelectTag() {
+        return isDisplaySelectTag;
+    }
+
+    public void setDisplaySelectTag(boolean displaySelectTag) {
+        isDisplaySelectTag = displaySelectTag;
     }
 }

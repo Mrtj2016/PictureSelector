@@ -27,6 +27,8 @@ public class BottomNavBarStyle implements Parcelable {
      */
     private int bottomNarBarHeight;
 
+    private boolean isDisplayBottomPreviewButton = true;
+
     /**
      * 底部预览文本
      */
@@ -314,5 +316,13 @@ public class BottomNavBarStyle implements Parcelable {
 
     public void setCompleteCountTips(boolean completeCountTips) {
         isCompleteCountTips = completeCountTips;
+    }
+
+    public boolean isDisplayBottomPreviewButton() {
+        return isDisplayBottomPreviewButton;
+    }
+
+    public void setDisplayBottomPreviewButton(boolean displayBottomPreviewButton) {
+        isDisplayBottomPreviewButton = displayBottomPreviewButton;
     }
 }

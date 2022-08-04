@@ -10,13 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="3000dp"
         android:alpha="0"
-        android:background="@color/ps_color_80" />
+        android:background="@color/ps_color_99_black" />
 
     <com.luck.picture.lib.widget.RoundCornerRelativeLayout
         android:id="@+id/round_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:corners="10dp"
         app:topNormal="true">
 
         <androidx.recyclerview.widget.RecyclerView

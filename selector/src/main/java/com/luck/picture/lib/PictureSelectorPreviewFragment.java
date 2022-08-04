@@ -562,6 +562,14 @@ public class PictureSelectorPreviewFragment extends PictureCommonFragment {
     private void initComplete() {
         SelectMainStyle selectMainStyle = PictureSelectionConfig.selectorStyle.getSelectMainStyle();
 
+        int textSize = selectMainStyle.getPreviewAdapterSelectTextSize();
+        if (StyleUtils.checkSizeValidity(textSize)) {
+            tvSelected.setTextSize(textSize);
+        }
+        int textColor = selectMainStyle.getPreviewAdapterSelectTextColor();
+        if (StyleUtils.checkStyleValidity(textColor)) {
+            tvSelected.setTextColor(textColor);
+        }
         if (StyleUtils.checkStyleValidity(selectMainStyle.getPreviewSelectBackground())) {
             tvSelected.setBackgroundResource(selectMainStyle.getPreviewSelectBackground());
         } else if (StyleUtils.checkStyleValidity(selectMainStyle.getSelectBackground())) {

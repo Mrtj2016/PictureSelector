@@ -150,6 +150,11 @@ public class SelectMainStyle implements Parcelable {
     private int adapterSelectTextSize;
 
     /**
+     * 预览勾选样式字体大小
+     */
+    private int previewAdapterSelectTextSize;
+
+    /**
      * 勾选按钮点击区域
      * <p>
      * use unit dp
@@ -161,6 +166,11 @@ public class SelectMainStyle implements Parcelable {
      * 勾选样式字体色值
      */
     private int adapterSelectTextColor;
+
+    /**
+     * 预览勾选样式字体色值
+     */
+    private int previewAdapterSelectTextColor;
 
     /**
      * 勾选样式位置
@@ -780,5 +790,21 @@ public class SelectMainStyle implements Parcelable {
 
     public void setPreviewBackgroundColor(int previewBackgroundColor) {
         this.previewBackgroundColor = previewBackgroundColor;
+    }
+
+    public int getPreviewAdapterSelectTextColor() {
+        return previewAdapterSelectTextColor;
+    }
+
+    public void setPreviewAdapterSelectTextColor(int previewAdapterSelectTextColor) {
+        this.previewAdapterSelectTextColor = previewAdapterSelectTextColor;
+    }
+
+    public int getPreviewAdapterSelectTextSize() {
+        return previewAdapterSelectTextSize;
+    }
+
+    public void setPreviewAdapterSelectTextSize(int previewAdapterSelectTextSize) {
+        this.previewAdapterSelectTextSize = previewAdapterSelectTextSize;
     }
 }

@@ -56,7 +56,13 @@ public class PictureAlbumAdapter extends RecyclerView.Adapter<PictureAlbumAdapte
         String name = folder.getFolderName();
         int imageNum = folder.getFolderTotalNum();
         String imagePath = folder.getFirstImagePath();
-        holder.tvSelectTag.setVisibility(folder.isSelectTag() ? View.VISIBLE : View.INVISIBLE);
+        PictureSelectorStyle selectorStyle = PictureSelectionConfig.selectorStyle;
+        AlbumWindowStyle albumWindowStyle = selectorStyle.getAlbumWindowStyle();
+        if (albumWindowStyle.isDisplaySelectTag()) {
+            holder.tvSelectTag.setVisibility(folder.isSelectTag() ? View.VISIBLE : View.INVISIBLE);
+        } else {
+            holder.tvSelectTag.setVisibility(View.INVISIBLE);
+        }
         LocalMediaFolder currentLocalMediaFolder = SelectedManager.getCurrentLocalMediaFolder();
         holder.itemView.setSelected(currentLocalMediaFolder != null
                 && folder.getBucketId() == currentLocalMediaFolder.getBucketId());

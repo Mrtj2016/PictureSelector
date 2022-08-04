@@ -127,6 +127,8 @@ public class CompleteSelectView extends LinearLayout {
             if (StyleUtils.checkTextValidity(selectText)) {
                 if (StyleUtils.checkTextTwoFormatValidity(selectText)) {
                     tvComplete.setText(String.format(selectText, SelectedManager.getSelectCount(), config.maxSelectNum));
+                } else if(StyleUtils.checkTextOneFormatValidity(selectText)) {
+                    tvComplete.setText(String.format(selectText, SelectedManager.getSelectCount()));
                 } else {
                     tvComplete.setText(selectText);
                 }

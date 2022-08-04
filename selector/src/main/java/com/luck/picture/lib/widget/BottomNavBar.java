@@ -121,6 +121,10 @@ public class BottomNavBar extends RelativeLayout implements View.OnClickListener
             setBackgroundColor(backgroundColor);
         }
 
+        boolean isDisplayPreviewButton = bottomBarStyle.isDisplayBottomPreviewButton();
+        if (!isDisplayPreviewButton) {
+            tvPreview.setVisibility(View.GONE);
+        }
         int previewNormalTextColor = bottomBarStyle.getBottomPreviewNormalTextColor();
         if (StyleUtils.checkStyleValidity(previewNormalTextColor)) {
             tvPreview.setTextColor(previewNormalTextColor);

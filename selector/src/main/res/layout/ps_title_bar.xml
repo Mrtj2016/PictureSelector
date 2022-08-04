@@ -54,6 +54,7 @@
                 android:id="@+id/ps_iv_arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/ps_tv_title"
                 android:scaleType="centerInside"
